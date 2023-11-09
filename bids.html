@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <title>BitsBids</title>
+  <style>
+        header {
+            background-color: #000045;
+            text-align: left;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-tagline {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        .tagline {
+            color: white;
+            font-size:23px;
+        }
+        header nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Align list items to the right */
+        }
+
+        header nav li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 20px; /* Add some spacing between list items */
+        }
+         header nav li a {
+            color: white;
+            text-decoration: none; /* Remove underlines from links */
+            font-size: 24px;
+        }
+        main {
+            background-color: white;
+            padding: 18px;
+        }
+
+         .search-bar {
+            text-align: right;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid white;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            width: 650px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        header nav {
+            margin-left: auto;
+        }
+         .trending-products, .new-arrivals {
+            width: 100%; /* Set the width to 100% to span the entire content area */
+        }
+
+        /* You can adjust other CSS properties for these containers, like margin or padding */
+        .trending-products {
+            margin-bottom: 250px; /* Add space between the two rows */
+        }
+
+        .new-arrivals {
+            margin-bottom: 250px; /* Add space between the two rows */
+        }
+        main {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.product-details {
+display: flex;
+max-width: 800px;
+background-color: white;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.product-image {
+flex: 1;
+margin-right: 20px;
+}
+
+.product-description {
+flex: 2;
+}
+    </style>
+</head>
+<body>
+<header>
+  <div class="logo-tagline">
+    <h1>BITSBids</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="Search products...">
+    <button class="search-button">Search</button>
+  </div>
+
+  <span class="tagline">...bid the BITS way</span>
+
+
+</header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="Bitsbids.html">Home</a></li>
+      <li><a href="Bid.html">Bid</a></li>
+      <li><a href="yourbids.html">Your BIDS</a></li>
+      <li><a href="messageseller.html">Message Seller</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="sell.html">Sell</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="product-details">
+    <div class="product-image">
+      <img src="product-image.jpg" alt="Product Name">
+    </div>
+    <div class="product-description">
+      <h2>Product Name</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Price: $29.99</p>
+      <p>Current Bid: $25.00</p>
+      <button id="bid-button">Place a Bid</button>
+      <button id="message-seller-button">Message Seller</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2023 Your E-Commerce Store</p>
+</footer>
+</body>
+</html>
