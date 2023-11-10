@@ -3,84 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Login</title>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <title>BitsBids</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0e043a;
+        header {
+            background-color: #000045;
+            text-align: left;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            width: 50%;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 20 20 10px rgba(0, 0, 0, 0.1);
-            
+        .logo-tagline {
+            display: flex;
+            align-items: center;
         }
 
-        h2 {
-            text-align: center;
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        .tagline {
+            color: white;
+            font-size:23px;
+        }
+        header nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Align list items to the right */
         }
 
-        label {
-            font-weight: bold;
+        header nav li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 130px; /* Add some spacing between list items */
+        }
+         header nav li a {
+            color: white;
+            text-decoration: none; /* Remove underlines from links */
+            font-size: 24px;
+        }
+        main {
+            background-color: white;
+            padding: 18px;
         }
 
-        input[type="text"],
-        input[type="password"] {
-            width: 95%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .forgot-password {
+         .search-bar {
             text-align: right;
         }
 
-        .signup-link {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
+        .search-input {
+            padding: 10px;
+            border: 1px solid white;
+            background-color: white;
+            color: black;
             border-radius: 5px;
-            cursor: pointer;
+            width: 650px;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .search-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        header nav {
+            margin-left: auto;
+        }
+         .trending-products, .new-arrivals {
+            width: 100%; /* Set the width to 100% to span the entire content area */
+        }
+
+        /* You can adjust other CSS properties for these containers, like margin or padding */
+        .trending-products {
+            margin-bottom: 1000px; /* Add space between the two rows */
+        }
+
+        .new-arrivals {
+            margin-bottom: 1000px; /* Add space between the two rows */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+<header>
+    <div class="logo-tagline">
+        <h1>BITSBids</h1>
+    </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search products...">
+        <button class="search-button">Search</button>
+    </div>
 
-            <div class="forgot-password">
-                <a href="#">Forgot Password?</a>
-            </div>
+    <span class="tagline">...bid the BITS way</span>
 
-            <button type="submit">Login</button>
-        </form>
 
-        <div class="signup-link">
-            Don't have an account? <a href="#">Sign Up</a>
-        </div>
+</header>
+<header>
+    <nav>
+        <ul>
+            
+            <li><a href="Bits-Bids.html">Home</a></li>
+            <li><a href="Bid.html">Bid</a></li>
+            <li><a href="yourbids.html">Your BIDS</a></li>
+            <li><a href="messageseller.html">Message Seller</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="sell.html">Sell</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            .product-box {
+                width: 20%;
+                float: left;
+                padding: 20px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+    
+            .product-image {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+    
+            .product-title {
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product-box {
+            width: 20%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .product-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Trending Products</h1>
+    <div class="product-box">
+        <img class="product-image" src="i1.jpg" alt="Product 1">
+        <div class="product-title">Product 1</div>
+        <p>Description of Product 1</p>
+        <p>Price: $19.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i2.jpg" alt="Product 2">
+        <div class="product-title">Product 2</div>
+        <p>Description of Product 2</p>
+        <p>Price: $24.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i3.jpg" alt="Product 3">
+        <div class="product-title">Product 3</div>
+        <p>Description of Product 3</p>
+        <p>Price: $29.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i4.jpg" alt="Product 4">
+        <div class="product-title">Product 4</div>
+        <p>Description of Product 4</p>
+        <p>Price: $39.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="im5.jpg" alt="Product 5">
+        <div class="product-title">Product 5</div>
+        <p>Description of Product 5</p>
+        <p>Price: $49.99</p>
     </div>
 </body>
+
+<body>
+    <h1> New Arrivals</h1>
+    <div class="product-box">
+        <img class="product-image" src="i1.jpg" alt="Product 1">
+        <div class="product-title">Product 1</div>
+        <p>Description of Product 1</p>
+        <p>Price: $19.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i2.jpg" alt="Product 2">
+        <div class="product-title">Product 2</div>
+        <p>Description of Product 2</p>
+        <p>Price: $24.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i3.jpg" alt="Product 3">
+        <div class="product-title">Product 3</div>
+        <p>Description of Product 3</p>
+        <p>Price: $29.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="i4.jpg" alt="Product 4">
+        <div class="product-title">Product 4</div>
+        <p>Description of Product 4</p>
+        <p>Price: $39.99</p>
+    </div>
+
+    <div class="product-box">
+        <img class="product-image" src="im5.jpg" alt="Product 5">
+        <div class="product-title">Product 5</div>
+        <p>Description of Product 5</p>
+        <p>Price: $49.99</p>
+    </div>
+
+
+
+    
+    
+
+
+<footer>
+    <div class="social-media">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+    <p>&copy; 2023 Your E-Commerce Store</p>
+</footer>
+
 </html>
