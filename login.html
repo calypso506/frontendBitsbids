@@ -9,7 +9,7 @@
        body {
     font-family: 'ABeeZee';
     font-size: 22px;
-    background: linear-gradient(to bottom, #000045, #0056b3);
+    background: linear-gradient(to bottom, #040720, #000045, #0056b3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +25,16 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.bitsbids-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 45px;
+      font-weight: bold;
+      color: white;
+
+    }
 
         h2 {
             text-align: center;
@@ -69,6 +79,7 @@
 <body>
 <div class="container">
   <h2>Login</h2>
+  <span class="bitsbids-text">BITSBids</span>
   <form action="#" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
@@ -84,7 +95,7 @@
   </form>
 
   <div class="signup-link">
-    Don't have an account? <a href="#">Sign Up</a>
+    Don't have an account? <a href="sign-up.html">Sign Up</a>
   </div>
 </div>
 </body>
