@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <style>
+        body {
+            font-family: 'ABeeZee';
+            font-size: 22px;
+        }
+
+        header {
+            background-color: #000045;
+            text-align: left;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-tagline {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .tagline {
+            color: white;
+            font-size: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav li {
+            display: inline;
+            margin-right: 130px;
+        }
+
+        header nav li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        main {
+            background-color: rgb(255, 255, 255);
+            padding: 18px;
+            text-align: center; /* Center align the content */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-tagline">
+            <h1>BITSBids</h1>
+        </div>
+
+        <span class="tagline">...bid the BITS way</span>
+    </header>
+
+    <header>
+        <nav>
+            <ul>
+                <li id="home"><a href="Bitsbids.html">Home</a></li>
+                <li><a href="Bid.html">Bid</a></li>
+                <li><a href="yourbids.html">Your BIDS</a></li>
+                <li><a href="messageseller.html">Message Seller</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="sell.html">Sell</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Wallet</h2>
+            <form action="#" method="post">
+                <label for="balance">Balance</label>
+                <label for = "balance value" > 200 </label>
+
+                <label for="amount">Add Amount</label>
+                <input type="text" id="amount" name="amount" required>
+
+                <button type="submit">Add Bitcoins</button>
+            </form>
+            <p>Minimum 200 BITCOINS are required in the wallet</p>
+        </div>
+    </main>
+</body>
+</html>
