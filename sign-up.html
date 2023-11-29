@@ -12,26 +12,18 @@
       background: linear-gradient(to bottom, #040720, #000045, #0056b3);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       height: 100vh;
-      padding-left: 20px;
       margin: 0;
     }
 
     .container {
-      max-width: 600px;
-      width: 90%;
+      max-width: 1000px;
+      width: 100%;
       padding: 10px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-right: 20px;
-    }
-
-    h1 {
-      color: white;
-      margin-right: auto;
-      margin-left: 20px;
     }
 
     .form-row {
@@ -83,9 +75,9 @@
       border: 0.5px solid black;
       border-radius: 20px;
       cursor: pointer;
-      margin: 20px auto 0;
-      font-size: 20px;
-      display: block;
+      margin-bottom:20px;
+      margin-left:330px;
+      font-size:20px;
     }
 
     button:hover {
@@ -94,66 +86,64 @@
   </style>
 </head>
 <body>
-  <h1>BITSBids</h1>
-  <div class="container">
-    <h2>Sign Up</h2>
-    <form action="#" method="post">
-      <div class="form-row">
-        <div class="form-column">
-          <label for="firstname">First name:</label>
-          <input type="text" id="firstname" name="firstname" required>
-        </div>
-        <div class="form-column">
-          <label for="hostel">Hostel:</label>
-          <input type="hostel" id="hostel" name="hostel" required>
-        </div>
-      
+<div class="container">
+  <h2>Sign Up</h2>
+  <form action="#" method="post">
+    <div class="form-row">
+      <div class="form-column">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" required>
       </div>
-      
-      <div class="form-row">
-        <div class="form-column">
-          <label for="lastname">Last name:</label>
-          <input type="text" id="lastname" name="lastname" required>
-        </div>
-        <div class="form-column">
-          <label for="bitsid">BITS ID:</label>
-          <input type="text" id="bitsid" name="bitsid" required>
-        </div>
-      
+      <div class="form-column">
+        <label for="hostel">Hostel:</label>
+        <input type="hostel" id="hostel" name="hostel" required>
       </div>
-      
-      <div class="form-row">
-        <div class="form-column">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      
-        <div class="form-column">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-        </div>
-      
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" required>
       </div>
-      
-      <div class="form-row">
-        <div class="form-column">
-          <label for="ph.number">Ph. Number:</label>
-          <input type="tel" id="ph.number" name="ph.number" required>
-        </div>
-        <div class="form-column">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
+      <div class="form-column">
+        <label for="bitsid">BITS ID:</label>
+        <input type="text" id="bitsid" name="bitsid" required>
       </div>
-      
-      <div class="haveanaccount">
-        <a href="Login.html">Have an account?</a>
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
       </div>
-      <button type="submit">Sign up</button>
-      <div class="haveanaccount">
-        
-    </form>
-  </div>
+
+      <div class="form-column">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-column">
+        <label for="ph.number">Ph. Number:</label>
+        <input type="tel" id="ph.number" name="ph.number" required>
+      </div>
+      <div class="form-column">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+    </div>
+
+    <div class="haveanaccount">
+      <a href="Login.html">Have an account?</a>
+    </div>
+    <button type="submit">Sign up</button>
+
+
+  </form>
+</div>
 </body>
 </html>
-
