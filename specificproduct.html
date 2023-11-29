@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    // Function to extract the username from the URL
+    function getUsernameFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('username'); // Assuming 'username' is passed as a query parameter
+    }
+
+    // Function to set the welcome message
+    function setWelcomeMessage() {
+      const username = getUsernameFromURL(); // Get the username from the URL
+
+      // Update the greeting message
+      const greetingElement = document.getElementById('greeting');
+      if (username) {
+        greetingElement.textContent = `Welcome, ${username}!`; // Set the welcome message with the username
+      } else {
+        greetingElement.textContent = 'Welcome!'; // If no username is found, display a generic welcome message
+      }
+    }
+
+    // Execute the function when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', setWelcomeMessage);
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
@@ -131,18 +154,21 @@ flex: 2;
       <li><a href="messageseller.html">Message Seller</a></li>
       <li><a href="wallet.html">Wallet</a></li>
       <li><a href="profilebid.html">Profile</a></li>
-      <li><a href="sell.html">Sell</a></li>
+      <li><a href="Inventory.html">Sell</a></li>
     </ul>
   </nav>
 </header>
-
-<main>
-  <div class="product-details">
-    <div class="product-image">
-      <img src="product-image.jpg" alt="Product Name">
-    </div>
-    <div class="product-description">
-      <h2>Product Name</h2>
+<div id="greeting" style="text-align: center; padding: 20px;"></div>
+ <main>
+        <div class="product-details">
+          <div class="product-image">
+            <img src="product-image.jpg" alt="Product Name" id="productImage">
+            <div class="image-arrows">
+              <button onclick="prevImage()">❮</button>
+              <button onclick="nextImage()">❯</button>
+            </div>
+          </div>
+          <div class="product-description">
       <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <p>Base Price: $29.99</p>
       <p>Current Bid: $25.00</p>
@@ -153,8 +179,5 @@ flex: 2;
   </div>
 </main>
 
-<footer>
-  <p>&copy; 2023 Your E-Commerce Store</p>
-</footer>
 </body>
 </html>
