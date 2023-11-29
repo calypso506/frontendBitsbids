@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+    // Function to extract the username from the URL
+    function getUsernameFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('username'); // Assuming 'username' is passed as a query parameter
+    }
+
+    // Function to set the welcome message
+    function setWelcomeMessage() {
+      const username = getUsernameFromURL(); // Get the username from the URL
+
+      // Update the greeting message
+      const greetingElement = document.getElementById('greeting');
+      if (username) {
+        greetingElement.textContent = `Welcome, ${username}!`; // Set the welcome message with the username
+      } else {
+        greetingElement.textContent = 'Welcome!'; // If no username is found, display a generic welcome message
+      }
+    }
+
+    // Execute the function when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', setWelcomeMessage);
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     <title>Wallet</title>
     <style>
         body {
@@ -32,7 +57,7 @@
 
         .tagline {
             color: white;
-            font-size: 20px;
+            font-size: 23px;
         }
 
         header nav ul {
@@ -43,13 +68,14 @@
 
         header nav li {
             display: inline;
-            margin-right: 130px;
+            margin-right: 10px;
+            margin-left: 95px;
         }
 
         header nav li a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         main {
@@ -90,45 +116,50 @@
         button:hover {
             background-color: #2980b9;
         }
+        header nav li#wallet {
+          border: 2px solid #fff;
+           padding: 10px;
+           border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-tagline">
-            <h1>BITSBids</h1>
-        </div>
+<header>
+    <div class="logo-tagline">
+        <h1>BITSBids</h1>
+    </div>
+    <span id="greeting"></span>
+    <span class="tagline">...bid the BITS way</span>
+</header>
 
-        <span class="tagline">...bid the BITS way</span>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li id="home"><a href="home.html">Home</a></li>
+            <li><a href="Bid.html">Bid</a></li>
+            <li><a href="yourbids.html">Your BIDS</a></li>
+            <li><a href="message.html">Message Seller</a></li>
+            <li id="wallet"><a href="wallet.html">Wallet</a></li>
+            <li><a href="profilebid.html">Profile</a></li>
+            <li><a href="inventory.html">Sell</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <header>
-        <nav>
-            <ul>
-                <li id="home"><a href="home.html">Home</a></li>
-                <li><a href="Bid.html">Bid</a></li>
-                <li><a href="yourbids.html">Your BIDS</a></li>
-                <li><a href="message.html">Message Seller</a></li>
-                <li><a href="wallet.html">Wallet</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="inventory.html">Sell</a></li>
-            </ul>
-        </nav>
-    </header>
+<main>
+    <div class="container">
+        <h2>Wallet</h2>
+        <form action="#" method="post">
+            <label for="balance">Balance</label>
+            <label for = "balance value" > 200 </label>
 
-    <main>
-        <div class="container">
-            <h2>Wallet</h2>
-            <form action="#" method="post">
-                <label for="balance">Balance</label>
-                <label for = "balance value" > 200 </label>
+            <label for="amount">Add Amount</label>
+            <input type="text" id="amount" name="amount" required>
 
-                <label for="amount">Add Amount</label>
-                <input type="text" id="amount" name="amount" required>
-
-                <button type="submit">Add Bitcoins</button>
-            </form>
-            <p>Minimum 200 BITCOINS are required in the wallet</p>
-        </div>
-    </main>
+            <button type="submit">Add Bitcoins</button>
+        </form>
+        <p>Minimum 200 BITCOINS are required in the wallet</p>
+    </div>
+</main>
 </body>
 </html>
