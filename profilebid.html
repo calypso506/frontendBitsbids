@@ -29,9 +29,9 @@
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   <title>User Profile</title>
   <style>
-    body {
-            font-family: 'ABeeZee'; font-size: 22px;
-        }
+     body {
+    font-family: 'ABeeZee';font-size: 22px;
+}
         header {
             background-color: #000045;
             text-align: left;
@@ -41,32 +41,39 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .logo-tagline {
             display: flex;
             align-items: center;
         }
+
         header h1 {
             margin: 0;
             font-size: 40px;
         }
         .tagline {
             color: white;
-            font-size: 23px;
+            font-size:23px;
         }
         header nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Align list items to the right */
         }
-         header nav li {
-            display: inline;
-            margin-right: 10px;
-            margin-left: 95px;
+
+        header nav li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 90px;
+             margin-left: 20px; /* Add some spacing between list items */
+
         }
-        header nav li a {
+         header nav li a {
             color: white;
-            text-decoration: none;
+            text-decoration: none; /* Remove underlines from links */
             font-size: 22px;
+        }
+         header nav {
+            margin-left: auto;
         }
         main {
             background-color: white;
@@ -142,19 +149,19 @@
     </div>
     <div class="editable-field">
       <label for="firstname">First Name:</label>
-      <input type="text" id="firstname" value="" readonly>
+      <input type="text" id="firstname" value="Eshaa" readonly>
     </div>
     <div class="editable-field">
       <label for="lastname">Last Name:</label>
-      <input type="text" id="lastname" value="" readonly>
+      <input type="text" id="lastname" value="Aranggan" readonly>
     </div>
     <div class="editable-field">
       <label for="bitsid">BITS ID:</label>
-      <input type="text" id="bitsid" value="" readonly>
+      <input type="text" id="bitsid" value="2022A7PS2013H" readonly>
     </div>
     <div class="editable-field">
       <label for="hostel">Hostel:</label>
-      <input type="text" id="hostel" value="" readonly>
+      <input type="text" id="hostel" value="Malaviya" readonly>
     </div>
 
     <button onclick="enableEditing()">Edit Profile</button>
