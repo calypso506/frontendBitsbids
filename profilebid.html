@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Function to extract the username from the URL
+    function getUsernameFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('username'); // Assuming 'username' is passed as a query parameter
+    }
+
+    // Function to set the welcome message
+    function setWelcomeMessage() {
+      const username = getUsernameFromURL(); // Get the username from the URL
+
+      // Update the greeting message
+      const greetingElement = document.getElementById('greeting');
+      if (username) {
+        greetingElement.textContent = `Welcome, ${username}!`; // Set the welcome message with the username
+      } else {
+        greetingElement.textContent = 'Welcome!'; // If no username is found, display a generic welcome message
+      }
+    }
+
+    // Execute the function when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', setWelcomeMessage);
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <title>User Profile</title>
+  <style>
+    body {
+            font-family: 'ABeeZee'; font-size: 22px;
+        }
+        header {
+            background-color: #000045;
+            text-align: left;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-tagline {
+            display: flex;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        .tagline {
+            color: white;
+            font-size: 23px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+         header nav li {
+            display: inline;
+            margin-right: 10px;
+            margin-left: 95px;
+        }
+        header nav li a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        main {
+            background-color: white;
+            padding: 18px;
+        }
+        .user-profile {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left; /* Align text to the left */
+        }
+        .editable-field {
+            margin-bottom: 10px;
+        }
+        .editable-field label {
+            display: inline-block;
+            width: 120px; /* Adjust width as needed */
+            margin-right: 10px;
+        }
+        .editable-field input[type="text"],
+        .editable-field input[type="email"] {
+            width: calc(100% - 130px); /* Adjust width minus label width and margin */
+            padding: 5px;
+            font-size: inherit;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        header nav li#profile {
+          border: 2px solid #fff;
+           padding: 10px;
+           border-radius: 5px;
+        }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-tagline">
+    <h1>BITSBids</h1>
+  </div>
+  <span id="greeting"></span>
+  <span class="tagline">...bid the BITS way</span>
+</header>
+<header>
+  <nav>
+    <ul>
+      <li id="home"><a href="home.html">Home</a></li>
+      <li><a href="Bid.html">Bid</a></li>
+      <li><a href="yourbids.html">Your BIDS</a></li>
+      <li><a href="messageseller.html">Message Seller</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li id="profile"><a href="profilebid.html">Profile</a></li>
+      <li><a href="inventory.html">Sell</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="user-profile">
+
+    <div class="editable-field">
+      <label for="username">Username:</label>
+      <input type="text" id="username" value="User's Name" readonly>
+    </div>
+    <div class="editable-field">
+      <label for="email">Email:</label>
+      <input type="email" id="email" value="user@example.com" readonly>
+    </div>
+    <div class="editable-field">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" value="" readonly>
+    </div>
+    <div class="editable-field">
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" value="" readonly>
+    </div>
+    <div class="editable-field">
+      <label for="bitsid">BITS ID:</label>
+      <input type="text" id="bitsid" value="" readonly>
+    </div>
+    <div class="editable-field">
+      <label for="hostel">Hostel:</label>
+      <input type="text" id="hostel" value="" readonly>
+    </div>
+
+    <button onclick="enableEditing()">Edit Profile</button>
+    <button onclick="saveProfile()">Save Changes</button>
+  </div>
+</main>
+
+
+<script>
+    function enableEditing() {
+      const inputs = document.querySelectorAll('.editable-field input');
+      const textarea = document.querySelector('.editable-field textarea');
+      const saveButton = document.querySelector('button:nth-of-type(2)');
+
+      inputs.forEach(input => input.removeAttribute('readonly'));
+      textarea.removeAttribute('readonly');
+      saveButton.style.display = 'inline-block';
+    }
+
+    function saveProfile() {
+      const inputs = document.querySelectorAll('.editable-field input');
+      const textarea = document.querySelector('.editable-field textarea');
+      const saveButton = document.querySelector('button:nth-of-type(2)');
+
+      inputs.forEach(input => input.setAttribute('readonly', 'true'));
+      textarea.setAttribute('readonly', 'true');
+      saveButton.style.display = 'none';
+
+      // Add code to save the updated profile information
+      alert("Profile information saved!");
+    }
+ </script>
