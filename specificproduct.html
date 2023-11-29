@@ -6,9 +6,9 @@
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   <title>BitsBids</title>
   <style>
-    body {
-    font-family: 'ABeeZee';font-size: 22px;
-}
+  body {
+            font-family: 'ABeeZee'; font-size: 22px;
+        }
         header {
             background-color: #000045;
             text-align: left;
@@ -18,38 +18,32 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo-tagline {
             display: flex;
             align-items: center;
         }
-
         header h1 {
             margin: 0;
             font-size: 40px;
         }
         .tagline {
             color: white;
-            font-size:23px;
+            font-size: 23px;
         }
         header nav ul {
-            list-style: none; /* Remove bullet points */
-            padding: 0; /* Remove default padding */
-            text-align: center; /* Align list items to the right */
+            list-style: none;
+            padding: 0;
+            text-align: center;
         }
-
-        header nav li {
-            display: inline; /* Display list items horizontally */
-            margin-right: 20px; /* Add some spacing between list items */
+         header nav li {
+            display: inline;
+            margin-right: 27px;
+            margin-left: 90px;
         }
-         header nav li a {
+        header nav li a {
             color: white;
-            text-decoration: none; /* Remove underlines from links */
-            font-size: 24px;
-        }
-        main {
-            background-color: white;
-            padding: 18px;
+            text-decoration: none;
+            font-size: 22px;
         }
 
          .search-bar {
@@ -134,10 +128,10 @@ flex: 2;
       <li><a href="home.html">Home</a></li>
       <li><a href="Bid.html">Bid</a></li>
       <li><a href="yourbids.html">Your BIDS</a></li>
-      <li><a href="message.html">Message Seller</a></li>
+      <li><a href="messageseller.html">Message Seller</a></li>
       <li><a href="wallet.html">Wallet</a></li>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a href="inventory.html">Sell</a></li>
+      <li><a href="profilebid.html">Profile</a></li>
+      <li><a href="sell.html">Sell</a></li>
     </ul>
   </nav>
 </header>
@@ -150,8 +144,9 @@ flex: 2;
     <div class="product-description">
       <h2>Product Name</h2>
       <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Price: $29.99</p>
+      <p>Base Price: $29.99</p>
       <p>Current Bid: $25.00</p>
+      <p>Bidding ends: 23/09/23, 12:00am</p>
       <button id="bid-button">Place a Bid</button>
       <button id="message-seller-button">Message Seller</button>
     </div>
