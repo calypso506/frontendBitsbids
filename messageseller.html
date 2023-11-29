@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    // Function to extract the username from the URL
+    function getUsernameFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('username'); // Assuming 'username' is passed as a query parameter
+    }
+
+    // Function to set the welcome message
+    function setWelcomeMessage() {
+      const username = getUsernameFromURL(); // Get the username from the URL
+
+      // Update the greeting message
+      const greetingElement = document.getElementById('greeting');
+      if (username) {
+        greetingElement.textContent = `Welcome, ${username}!`; // Set the welcome message with the username
+      } else {
+        greetingElement.textContent = 'Welcome!'; // If no username is found, display a generic welcome message
+      }
+    }
+
+    // Execute the function when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', setWelcomeMessage);
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   <title>chat</title>
   <style>
   body {
-    font-family: 'ABeeZee';font-size: 22px;
-}
-   header {
+            font-family: 'ABeeZee';
+            font-size: 22px;
+        }
+
+        header {
             background-color: #000045;
             text-align: left;
             color: white;
@@ -42,40 +67,19 @@
 
         header nav li {
             display: inline;
-            margin-right: 130px;
+            margin-right: 20px;
+            margin-left: 90px;
         }
 
         header nav li a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         main {
             background-color: white;
             padding: 18px;
-        }
-
-        .search-bar {
-            text-align: right;
-        }
-
-        .search-input {
-            padding: 10px;
-            border: 1px solid white;
-            background-color: white;
-            color: black;
-            border-radius: 5px;
-            width: 650px;
-        }
-
-        .search-button {
-            padding: 10px 20px;
-            background-color: transparent;
-            border: 1px solid white;
-            color: white;
-            border-radius: 5px;
-            margin-left: 10px;
         }
 
         header nav {
@@ -98,15 +102,8 @@
   <div class="logo-tagline">
     <h1>BITSBids</h1>
   </div>
-
-  <div class="search-bar">
-    <input type="text" class="search-input" placeholder="Search products...">
-    <button class="search-button">Search</button>
-  </div>
-
+<span id="greeting"></span>
   <span class="tagline">...bid the BITS way</span>
-
-
 </header>
 <header>
   <nav>
@@ -114,9 +111,9 @@
       <li><a href="home.html">Home</a></li>
       <li><a href="Bid.html">Bid</a></li>
       <li><a href="yourbids.html">Your BIDS</a></li>
-      <li id="message"><a href="message.html">Message Seller</a></li>
+      <li id="message"><a href="messageseller.html">Message Seller</a></li>
       <li><a href="wallet.html">Wallet</a></li>
-      <li><a href="profile.html">Profile</a></li>
+      <li><a href="profilebid.html">Profile</a></li>
       <li><a href="inventory.html">Sell</a></li>
     </ul>
   </nav>
