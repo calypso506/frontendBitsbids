@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Function to extract the username from the URL
+    function getUsernameFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('username'); // Assuming 'username' is passed as a query parameter
+    }
+
+    // Function to set the welcome message
+    function setWelcomeMessage() {
+      const username = getUsernameFromURL(); // Get the username from the URL
+
+      // Update the greeting message
+      const greetingElement = document.getElementById('greeting');
+      if (username) {
+        greetingElement.textContent = `Welcome, ${username}!`; // Set the welcome message with the username
+      } else {
+        greetingElement.textContent = 'Welcome!'; // If no username is found, display a generic welcome message
+      }
+    }
+
+    // Execute the function when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', setWelcomeMessage);
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <title>Add Product</title>
+  <style>
+    body {
+    font-family: 'ABeeZee';font-size: 22px;
+}
+        header {
+            background-color: #000045;
+            text-align: left;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-tagline {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        .tagline {
+            color: white;
+            font-size:23px;
+        }
+        header nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Align list items to the right */
+        }
+
+        header nav li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 75px;
+             margin-left: 23px; /* Add some spacing between list items */
+
+        }
+         header nav li a {
+            color: white;
+            text-decoration: none; /* Remove underlines from links */
+            font-size: 24px;
+        }
+         header nav {
+            margin-left: auto;
+        }
+        main {
+            background-color: white;
+            padding: 18px;
+        }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    .image-video-input {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image-video-input input {
+      width: calc(50% - 5px); /* Adjust width for two inputs in a row */
+    }
+    .logo-tagline {
+      display: flex;
+      flex-direction: column; /* Set the content in column layout */
+      align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    .logo-tagline h1 {
+      margin-bottom: 0; /* Remove margin bottom from h1 */
+    }
+
+    .logo-tagline p {
+      margin-top: 0.2em; /* Add margin top to separate h1 and p */
+    }
+    header nav li#addproduct {
+          border: 2px solid #fff;
+           padding: 10px;
+           border-radius: 5px;
+        }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-tagline">
+    <h1>BITSBids</h1>
+  </div>
+  <span id="greeting"></span>
+  <span class="tagline">...bid the BITS way</span>
+</header>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="Inventory.html">Inventory</a></li>
+      <li id="addproduct"><a href="addproduct.html">Add Products</a></li>
+      <li><a href="messagebidder.html">Message Bidder</a></li>
+      <li><a href="sold.html">Sold</a></li>
+      <li><a href="profilesell.html">Profile</a></li>
+      <li><a href="home.html">Back to Bidding</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+  <h2>Add Product</h2>
+  <form action="#" method="post">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" required>
+
+    <label for="price">Base Price:</label>
+    <input type="number" id="price" name="price" required>
+
+    <label for="biddingEnds">Bidding Ends:</label>
+    <input type="datetime-local" id="biddingEnds" name="biddingEnds" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <div>
+      <label for="images">Upload Images (JPEG, PNG, JPG):</label>
+      <input type="file" id="images" name="images" accept="image/jpeg, image/png, image/jpg" multiple required>
+    </div>
+    <div class="image-video-input">
+      <label for="videos">Upload Videos:</label>
+      <input type="file" id="videos" name="videos" accept="video/*" multiple>
+    </div>
+
+
+    <button type="submit">Add Product</button>
+  </form>
+</div>
+</body>
+</html>
